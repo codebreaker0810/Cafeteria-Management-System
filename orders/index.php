@@ -47,17 +47,17 @@
 </div>   --> 
 
       <label for="name">Customer Name</label>
-      <input type="text" required class="form-control" id="name" placeholder="Name">
+      <input type="text" name="name" required class="form-control" id="name" placeholder="Name">
     </div>
     
  
   <div class="form-group">
     <label for="pno">Phone Number</label>
-    <input type="text" required class="form-control" id="pno" placeholder="ex-888888888">
+    <input type="text" name="pno" required class="form-control" id="pno" placeholder="ex-888888888">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Address </label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text" name ="Address" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div><!--
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -83,7 +83,7 @@
      <input type="text" class="form-control typeahead" id="idesc" data-show-subtext="true" data-live-search="true">
  <label for="qty">Quantity</label>
   <input type="Number" class="form-control" id="quantity" name="quantity" value =1>
-  <input type="hidden" class="form-control" id="item" name="item">
+  <input type="text" class="form-control" id="item" name="item">
  </div>
  
 <div class="form-group">
@@ -115,6 +115,7 @@
 
 
 </div>
+
 <button type="submit" onclick="tbltoarr()"class="btn btn-primary    ">CLick</button>
  <!-- <button type="submit" class="btn btn-primary">Sign in</button>
 -->

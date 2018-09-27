@@ -46,6 +46,7 @@ $result = mysqli_query($con,$sql);
   {
     $res=mysqli_fetch_array($result);
     $_SESSION['username']=$res['name'];
+    $_SESSION['eid']=$res['eid'];
     header('location:home.php');
   }
   else

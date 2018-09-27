@@ -34,6 +34,16 @@
     </head>
     <body>
      
+<?php
+if(isset($_GET['s']))
+{
+  if($_GET['s']==1)
+    {
+    echo "<script type='text/javascript'>alert( 'Sucess' );</script>";
+
+    }
+}
+?>
 
 <form action="process.php" method="post">
      <div class="form-group ">

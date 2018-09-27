@@ -53,6 +53,6 @@ for($i=0;$i<sizeof($data);$i++)
     window.open('login.php','_self');
     </script>
     <?php
-    header('location:index.php');
+    header('location:index.php?s=1');
     ?>
 

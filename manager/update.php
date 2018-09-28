@@ -1,3 +1,11 @@
+<?php
+ 
+ session_start();
+ if(!isset($_SESSION['username'])){
+    header('location:login.php');
+ }
+ ?>
+
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
@@ -21,8 +29,7 @@
     <div class="panel-body">  
         <form role="form" method="post" action="update.php">  
             <div class="form-group">  
-                Enter employee mail: <input  placeholder="Enter mail" name="mail" type="mail" required autofocus> &nbsp 
-                Enter employee name: <input  placeholder="Enter name" name="name" type="text" required> &nbsp
+                Enter employee name: <input  placeholder="Enter name" name="name" type="text" required autofocus> &nbsp
                 <input class="btn btn-primary" type="submit" name="submit" value="Search"> 
             </div> 
     </form>
@@ -48,11 +55,10 @@
     if(isset($_POST['submit']))
     {
         include("dbcon.php");
-        
-        $email=$_POST['mail'];
+     
         $name=$_POST['name'];
 
-        $sql="SELECT * FROM `employee` WHERE mail='$email' AND `name` LIKE '%$name%'";
+        $sql="SELECT * FROM `employee` WHERE `name` LIKE '%$name%' AND mid=".$_SESSION['mid'];
         $run=mysqli_query($con,$sql);
 
         if(mysqli_num_rows($run)<1)
@@ -72,7 +78,7 @@
                 <td><?php echo $data['mail'];  ?></td>  
                 <td><?php echo $data['phone'];  ?></td>
                 <td><?php echo $data['password'];  ?></td>
-                <td><a href="updateemp.php?eid=<?php echo $data['eid'];?>"><button class="btn btn-danger">Update</button></a></td>  
+                <td><a href="updateemp.php?eid=<?php echo $data['eid'];?>"><button class="btn btn-warning">Update</button></a></td>  
            </tr>
            <?php
             }

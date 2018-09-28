@@ -38,7 +38,7 @@ include("dbcon.php");
                     <form role="form" method="post" action="updatedata.php">  
                         <fieldset>  
                             <div class="form-group">  
-                              Enter name: <input class="form-control" name="name" type="text" value=<?php echo $data['name']; ?> pattern="[A-Za-z ]{1-32}" title="Only Letters allowed" required autofocus>  
+                              Enter name: <input class="form-control" name="name" type="text" value=<?php echo $data['name']; ?> pattern="[A-Za-z ]+" title="Only Letters allowed" required autofocus>  
                             </div>  
                             <div class="form-group">  
                               Enter phone: <input class="form-control" name="phone" type="text" value=<?php echo $data['phone']; ?> pattern="[789][0-9]{9}" title="Enter valid Phone number" required>  

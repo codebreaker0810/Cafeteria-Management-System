@@ -13,7 +13,11 @@
 
 </head>
 <body>
+	<?php
+	include('head.php');
+?>
 <div class="container">
+	
 	<h2 class="text-center text-success">Welcome <?php echo $_SESSION['username']; ?></h2>
 	<h4 align="right"><a href="logout.php">LogOut</a></h4>
 </div>

@@ -27,7 +27,7 @@
                     <form role="form" method="post" action="insertemp.php">  
                 			<fieldset>
                         	<div class="form-group ">
-                               Enter name: <input class="form-control" placeholder="name" name="name" type="text" pattern="[A-Za-z ]{1-32}" title="Only Letters allowed" required autofocus>
+                               Enter name: <input class="form-control" placeholder="name" name="name" type="text" pattern="[A-Za-z ]+" title="Only Letters allowed" required autofocus>
                             </div>  
                             <div class="form-group">  
                                Enter phone: <input class="form-control" placeholder="phone" name="phone" type="text" pattern="[789][0-9]{9}" title="Enter valid Phone number" required>  
@@ -36,7 +36,7 @@
                                Enter email: <input class="form-control" placeholder="E-mail" name="email" type="email" required>  
                             </div>  
                             <div class="form-group">  
-                               Enter password: <input class="form-control" placeholder="Password" name="pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
+                               Enter password: <input class="form-control" placeholder="Password" name="pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>  
                             </div>  
                             <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
   							
@@ -81,7 +81,6 @@ exit();
         echo"<script>window.open('home.php','_self')</script>";  
         
     }  
-  
 
 }  
   

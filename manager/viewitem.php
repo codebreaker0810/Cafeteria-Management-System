@@ -9,7 +9,7 @@
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
-    <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder--> 
     <title>View Items</title>  
 </head>  
 <style>  
@@ -27,6 +27,17 @@
 <div class="container">
     <div class="table-scrol">  
         <h1 align="center">All the Items</h1>  
+        <?php
+    if(isset($_GET['deleted'])==true)
+    {
+    ?>
+    <div class="alert alert-success">
+      <a href="viewitem.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong>Item has been deleted!!
+    </div>
+    <?php
+    }
+  ?>
         <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
             <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
             <thead>  

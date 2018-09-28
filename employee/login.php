@@ -14,6 +14,19 @@
   </head>
 
   <body class="text-center">
+    <div class="container">
+      <?php
+      if(isset($_GET['error'])==true)
+      {
+      ?>
+      <div class="alert alert-danger">
+        <a href="login.php" class="close" data-dismiss="alert">&times;</a>
+          <strong>Sorry!</strong>Username or password is incorrect !!
+      </div>
+      <?php
+      }
+     ?>
+
     <form class="form-signin"  action="login.php"  method="post">
       <img class="mb-4" src="images\u3.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>    
@@ -27,6 +40,7 @@
       <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log in</button>
       <p class="mt-5 mb-3 text-muted">&copy; MITCOE_2018-2019</p>
     </form>
+  </div>
   </body>
 </html>
 <?php
@@ -50,13 +64,7 @@ $result = mysqli_query($con,$sql);
   }
   else
   {
-    ?>
-    <script>
-    alert('Username or password is incorrect !!');
-    window.open('login.php','_self');
-    </script>
-    <?php
-    
+    header("location:login.php?error=1");    
   }
 }
 ?>

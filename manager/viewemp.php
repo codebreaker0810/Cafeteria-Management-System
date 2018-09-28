@@ -27,6 +27,17 @@
 <div class="container">  
 <div class="table-scrol">  
     <h1 align="center">All the Employee</h1>  
+  <?php
+    if(isset($_GET['deleted'])==true)
+    {
+    ?>
+    <div class="alert alert-success">
+      <a href="viewemp.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong>user has been deleted!!
+    </div>
+    <?php
+    }
+  ?>
   
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
   

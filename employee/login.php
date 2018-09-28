@@ -30,8 +30,12 @@
     <form class="form-signin"  action="login.php"  method="post">
       <img class="mb-4" src="images\u3.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>    
+    <div class="form-group">
       <input type="text" name="user" class="form-control" placeholder="Username" required autofocus>
+    </div>
+    <div class="form-group">
       <input type="password" name="password" class="form-control" placeholder="Password" required>
+    </div>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me

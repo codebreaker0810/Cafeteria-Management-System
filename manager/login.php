@@ -26,13 +26,27 @@
     <?php
     }
   ?>
-  
+  <?php
+    if(isset($_GET['err'])==1)
+    {
+    ?>
+    <div class="alert alert-danger">
+      <a href="login.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Sorry!</strong>You Must Login First !!
+    </div>
+    <?php
+    }
+  ?>
    <form class="form-signin"  action="login.php"  method="post">
       <img class="mb-4" src="images\u1.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <div class="form-group"> 
       <label for="inputuser" class="sr-only">Username</label>
       <input type="text" name="user" class="form-control" placeholder="Username" required autofocus>
+      </div>
+      <div class="form-group"> 
       <label for="inputPassword" class="sr-only">Password</label>
+      </div>
       <input type="password" name="password" class="form-control" placeholder="Password" required>
       <div class="checkbox mb-3">
         <label>

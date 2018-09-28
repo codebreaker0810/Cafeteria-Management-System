@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -34,7 +34,7 @@
                             <div class="form-group">  
                                Upload image: <input class="form-control" name="img" type="file" required>  
                             </div>   
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="submit" name="submit" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Add" name="submit" >  
   
                         </fieldset>  
                     </form>  

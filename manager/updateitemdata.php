@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -47,7 +47,7 @@ include("dbcon.php");
                                Upload image: <input class="form-control" name="img" type="file" required>  
                             </div>   
                             <input name="id" type="hidden" value=<?php echo $data['iid']; ?> >
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="submit" name="submit" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="submit" >  
   
                         </fieldset>  
                     </form>  

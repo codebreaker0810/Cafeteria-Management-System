@@ -142,7 +142,7 @@ if(isset($_GET['s']))
      $("#add_row").click(function(){ 
      
 
-      $('#tab_logic').append("<tr> <td><input name='name' type='text' placeholder='Name' class='form-control' value="+document.getElementById('idesc').value+"> </td><td><input  name='quantity' type='text'   value="+document.getElementById('quantity').value+"  class='form-control'></td><td><a id='delete_row' class='btn btn-primary pull-left'onclick='deleteRow(this)'>Delete</a></td></tr>");
+      $('#tab_logic').append("<tr> <td><input name='name1' type='text' placeholder='Name' class='form-control' value="+document.getElementById('idesc').value+"> </td><td><input  name='quantity' type='text'   value="+document.getElementById('quantity').value+"  class='form-control'></td><td><a id='delete_row' class='btn btn-primary pull-left'onclick='deleteRow(this)'>Delete</a></td></tr>");
       i++; 
   });
      

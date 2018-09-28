@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -38,7 +38,7 @@
                             <div class="form-group">  
                                Enter password: <input class="form-control" placeholder="Password" name="pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>  
                             </div>  
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Add" name="register" >  
   							
   						</fieldset>  
                     </form>  

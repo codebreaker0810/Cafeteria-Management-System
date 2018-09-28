@@ -37,9 +37,9 @@
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 </div>
                  <div class="form-group"> 
-                 Username:
                   <input type="text" name="user" class="form-control" placeholder="Username" required autofocus>
-                  Password:
+                  </div>
+                  <div class="form-group">
                   <input type="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
             <div class="checkbox mb-3">

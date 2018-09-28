@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
 ?>
@@ -50,7 +50,7 @@ include("dbcon.php");
                               Enter password: <input class="form-control" name="pass" type="password" value=<?php echo $data['password']; ?> pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
                             </div>
                             <input name="eid" type="hidden" value=<?php echo $data['eid']; ?> >    
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="register" >  
   
                         </fieldset>  
                     </form>  

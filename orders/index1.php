@@ -17,7 +17,9 @@
   }
   .card{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
+
 </style>
 
 
@@ -38,6 +40,7 @@ if(isset($_GET['s']))
   if($_GET['s']==1)
     {
     echo "<script type='text/javascript'>alert( 'Sucess' );</script>";
+
     }
 }
 ?>
@@ -90,7 +93,7 @@ if(isset($_GET['s']))
      <input type="text" class="form-control typeahead" id="idesc" data-show-subtext="true" data-live-search="true">
  <label for="qty">Quantity</label>
   <input type="Number" class="form-control" id="quantity" name="quantity" value =1>
-  <input type="hidden" class="form-control" id="item" name="item">
+  <input type="text" class="form-control" id="item" name="item">
  </div>
  
 <div class="form-group">
@@ -115,19 +118,17 @@ if(isset($_GET['s']))
       </table>
     </div>
   </div>
-  <a  id="add_row"  class="btn btn-primary " style="text-decoration-color: red">Add Item</a>
+  <a  id="add_row"  class="btn btn-primary " >Add Row</a>
 <div class="form-group"></div>
 
-  <button='delete_row1' type="submit"class="btn btn-primary "  onclick="deleteAllRows()">Delete All</button='delete_row1'>
+  <button='delete_row1' type="submit"class="btn btn-primary "  onclick="deleteAllRows()">Delete All</button>
 
 
+</div>
 
-<div class="form-group"></div>
-
-<button type="submit" onclick="tbltoarr()"class="btn btn-primary    ">Add Order</button>
+<button type="submit" onclick="tbltoarr()"class="btn btn-primary    ">CLick</button>
  <!-- <button type="submit" class="btn btn-primary">Sign in</button>
 -->
-</div>
 </form>
         
  
@@ -139,12 +140,18 @@ if(isset($_GET['s']))
        $(document).ready(function(){
       var i=0;
      $("#add_row").click(function(){ 
-     
-      $('#tab_logic').append("<tr> <td><input name='name1' type='text' placeholder='Name' class='form-control' value="+document.getElementById('idesc').value+"> </td><td><input  name='quantity' type='text'   value="+document.getElementById('quantity').value+"  class='form-control'></td><td><a id='delete_row' class='btn btn-primary pull-left'onclick='deleteRow(this)'>Delete</a></td></tr>");
+    
+      var idesc = document.getElementById('idesc').value;
+
+      $('#tab_logic').append("<tr> <td><input name='name1' type='textarea' placeholder='Name' class='form-control' value="+idesc+"> </td><td><input  name='quantity' type='text'   value="+document.getElementById('quantity').value+"  class='form-control'></td><td><a id='delete_row' class='btn btn-primary pull-left'onclick='deleteRow(this)'>Delete</a></td></tr>");
       i++; 
   });
      
+
 });
+
+
+
 </script>
 <script>
 function deleteRow(r) {
@@ -157,6 +164,8 @@ var table = document.getElementById('tab_logic');
 var rowCount = table.rows.length;
 for (var i = tableHeaderRowCount; i < rowCount; i++) {
     table.deleteRow(tableHeaderRowCount);
+
+
 }
   }
 </script>
@@ -164,6 +173,7 @@ for (var i = tableHeaderRowCount; i < rowCount; i++) {
 var $input = $(".typeahead");
 $input.typeahead({
   source: [<?php 
+
        $array = array();
     $con=mysqli_connect("localhost","root","","cafemgmt");
     $query=mysqli_query($con, "select * from item ");
@@ -196,7 +206,8 @@ var arr=[];
   { var i=0;
     $("#tab_logic").find('tr').each(function(){
       if(i!=0){
-         var val1 = $(this).find('td:eq(0) input[type="text"]').val();
+         var val1 =  $(this).find('td:eq(0) input[type="text"]').val();
+         
          var val2 = $(this).find('td:eq(1) input[type="text"]').val();
          var obj= {idesc:val1,quantity:val2};
           arr.push(obj);
@@ -220,13 +231,5 @@ var arr=[];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
-<style type="text/css">
-  .btn:not(:disabled):not(.disabled) {
-
-    cursor: pointer;
-    color: white;
-
-}
-</style>
-</script>  
+  
 </html>

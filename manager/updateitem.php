@@ -24,6 +24,9 @@
 </style>  
   
 <body>  
+    <?php
+    include("header.php");
+    ?>
 <div align="center">  
 <h3 class="panel-title">Update Item details</h3> <br> 
     <div class="panel-body">  

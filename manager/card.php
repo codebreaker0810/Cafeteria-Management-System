@@ -8,37 +8,65 @@
 <body>
 
 <div class="container">
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="images/add.png" alt="Card image cap" >
-    <div class="card-body">
-      <h5 class="card-title">Add Employee</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="images/edit.png" alt="Card image cap" >
-    <div class="card-body">
-      <h5 class="card-title">Update Employee Details</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="images/del.png" alt="Card image cap" >
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
+<div class="row">
+
+	  <div class="col-sm-4 py-2">
+            <div class="card h-100 border-primary">
+                <div class="card-body">
+                    <h3 class="card-title">Primary</h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-outline-secondary">Outline</a>
+                </div>
+                <div class="card-footer">
+     			 <small class="text-muted">Last updated 3 mins ago</small>
+   			    </div>
+            </div>
+        </div>
+
+	 <div class="col-sm-4 py-2">
+            <div class="card h-100 text-white bg-danger">
+                <div class="card-body">
+                    <h3 class="card-title">Danger</h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-outline-light">Outline</a>
+                </div>
+                <div class="card-footer">
+     			 <small class="text-muted">Last updated 3 mins ago</small>
+   			    </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 py-2">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h3 class="card-title">Hello</h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-outline-light">Outline</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 py-2">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h3 class="card-title">Hello</h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-outline-light">Outline</a>
+                </div>
+            </div>
+        </div>
+
+        	<div class="col-sm-4 py-2">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h3 class="card-title">Hello</h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-outline-light">Outline</a>
+                </div>
+            </div>
+        </div>
+   
+  
 </div>
 </div>
 </body>

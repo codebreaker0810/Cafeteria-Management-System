@@ -24,6 +24,9 @@
 </style>  
   
 <body>  
+    <?php
+    include("header.php");
+    ?>
 <div class="container">
     <div class="table-scrol">  
         <h1 align="center">All the Items</h1>  

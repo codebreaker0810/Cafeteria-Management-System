@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['mid'])){
+ if(!isset($_SESSION['eid'])){
     header('location:login.php');
  }
 ?>
@@ -10,14 +10,12 @@
  
 include("dbcon.php");
 
-    $update_id=$_GET['eid'];  
-    $sql="SELECT * FROM `employee` WHERE `eid`='$update_id'";//delete query  
+    $pid=$_GET['eid'];  
+    $sql="SELECT * FROM `employee` WHERE `eid`='$pid'";//delete query  
     $run=mysqli_query($con,$sql);  
 
     $data=mysqli_fetch_assoc($run);
-
 ?>
-
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
@@ -26,7 +24,7 @@ include("dbcon.php");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">        </script>
       
-    <title>Updation</title>  
+    <title>Profile</title>  
 </head>  
  
 <body>  
@@ -38,24 +36,22 @@ include("dbcon.php");
         <div class="col-md-5  ">
             <div class="card">
                 <div class="card-body">  
-                    <h3 class="panel-title">Update Employee details</h3>     
-                    <form role="form" method="post" action="updatedata.php">  
+                    <h3 class="panel-title">Employee Profile</h3>     
+                    <form role="form">  
                         <fieldset>  
                             <div class="form-group">  
-                              Enter name: <input class="form-control" name="name" type="text" value=<?php echo $data['name']; ?> pattern="[A-Za-z ]+" title="Only Letters allowed" required autofocus>  
+                              Your name: <input class="form-control" name="name" type="text" value=<?php echo $data['name']; ?> readonly="readonly">  
                             </div>  
                             <div class="form-group">  
-                              Enter phone: <input class="form-control" name="phone" type="text" value=<?php echo $data['phone']; ?> pattern="[789][0-9]{9}" title="Enter valid Phone number" required>  
+                              Your phone: <input class="form-control" name="phone" type="text" value=<?php echo $data['phone']; ?> readonly="readonly">  
                             </div> 
                             <div class="form-group">  
-                              Enter email: <input class="form-control" name="email" type="email" readonly="readonly" value=<?php echo $data['mail']; ?> required>  
+                              Your email: <input class="form-control" name="email" type="email" value=<?php echo $data['mail']; ?> readonly="readonly">  
                             </div>  
                             <div class="form-group">  
-                              Enter password: <input class="form-control" name="pass" type="password" value=<?php echo $data['password']; ?> pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
+                               Your password: <input class="form-control" name="pass" type="password" value=<?php echo $data['password']; ?> readonly="readonly">  
                             </div>
-                            <input name="eid" type="hidden" value=<?php echo $data['eid']; ?> >    
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="register" >  
-  
+                           
                         </fieldset>  
                     </form>  
                 </div>  

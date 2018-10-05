@@ -5,6 +5,7 @@
     header('location:login.php');
  }
 ?>
+
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
@@ -26,6 +27,19 @@
     <?php
     include("header.php");
     ?>
+    <div class="container">
+        <br>
+    <?php
+    if(isset($_GET['update'])==true)
+    {
+    ?>
+    <div class="alert alert-success">
+      <a href="viewemp.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong>user has been updated!!
+    </div>
+    <?php
+    }
+  ?>
 <div align="center">  
 <h3 class="panel-title">Update Employee details</h3> <br> 
     <div class="panel-body">  
@@ -37,7 +51,7 @@
     </form>
     </div>
   </div>   
-<div class="container">
+
 <div class="table-scrol">  
     <h3 align="center">All the Employee</h3>  
     <div class="table-responsive">

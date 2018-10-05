@@ -31,7 +31,7 @@
       <img class="mb-4" src="images\u3.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>    
     <div class="form-group">
-      <input type="text" name="user" class="form-control" placeholder="Username" required autofocus>
+      <input type="text" name="user" class="form-control" placeholder="Useremail" required autofocus>
     </div>
     <div class="form-group">
       <input type="password" name="password" class="form-control" placeholder="Password" required>
@@ -63,7 +63,7 @@ $result = mysqli_query($con,$sql);
   if(mysqli_num_rows($result)==1)
   {
     $res=mysqli_fetch_array($result);
-    $_SESSION['username']=$res['name'];
+    $_SESSION['uname']=$res['name'];
     $_SESSION['eid']=$res['eid'];
     header('location:home.php');
   }

@@ -12,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
     <title>View Items</title>  
 </head>  
-<style>  
+ <style>  
     .login-panel {  
         margin-top: 150px;  
     }  
@@ -21,8 +21,7 @@
   
     }  
   
-</style>  
-  
+</style> 
 <body>  
     <?php
     include("header.php");

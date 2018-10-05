@@ -42,11 +42,11 @@
    
   </ul>
   <ul class="navbar-nav">
-    <li><a class="nav-link" href="login.php"><span class="fa fa-user"></span> Admin</a></li>
+    <li><a class="nav-link" href="profile.php?mid=<?php echo $_SESSION['mid'];?>"><span class="fa fa-user"></span><?php echo $_SESSION['username']; ?></a></li>
     <li><a class="nav-link" href="logout.php"><span class="fa fa-sign-in"></span> Logout</a></li>
   </ul>
 
 </nav>
-
+<br>
 </body>
 </html>

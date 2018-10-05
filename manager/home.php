@@ -59,7 +59,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Delete Item</h3>
                     <p class="card-text">Delete the Item details.</p>
-                    <a href="#" class="btn btn-outline-light">Delete</a>
+                    <a href="viewitem.php" class="btn btn-outline-light">Delete</a>
                 </div>
                 <div class="card-footer">
      			 <small class="text-white">Last updated 3 mins ago</small>

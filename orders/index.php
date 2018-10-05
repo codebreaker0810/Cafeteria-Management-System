@@ -60,7 +60,7 @@ if(isset($_GET['s']))
  
   <div class="form-group">
     <label for="pno">Phone Number</label>
-    <input type="text" name="pno" required class="form-control" id="pno" placeholder="ex-888888888">
+    <input type="text" name="pno" required class="form-control" id="pno" placeholder="ex-888888888" pattern="[789][0-9]{9}" title="Enter valid Phone number">
   </div>
   <div class="form-group">
     <label for="inputAddress2">Address </label>

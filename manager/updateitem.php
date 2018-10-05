@@ -26,7 +26,19 @@
     <?php
     include("header.php");
     ?>
-<div align="center">  
+<div align="center">
+ <br>
+    <?php
+    if(isset($_GET['update'])==true)
+    {
+    ?>
+    <div class="alert alert-success">
+      <a href="viewemp.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong>Data updated successfully
+    </div>
+    <?php
+    }
+  ?>  
 <h3 class="panel-title">Update Item details</h3> <br> 
     <div class="panel-body">  
         <form role="form" method="post" action="updateitem.php">  
@@ -89,6 +101,9 @@
     </div>
     </div>
 </div>
+<?php
+    include("footer.php");
+?>
 </body>
 </html>
 

@@ -31,7 +31,7 @@
     <div class="table-scrol">  
         <h1 align="center">All the Items</h1>  
         <?php
-    if(isset($_GET['deleted'])==true)
+    if(isset($_GET['delete'])==true)
     {
     ?>
     <div class="alert alert-success">
@@ -71,9 +71,9 @@
             <td><?php echo $id;  ?></td>  
             <td><?php echo $name;  ?></td>   
             <td><?php echo $price;  ?></td>
-            <td><img src="images/<?php echo $img; ?>"  style="max-width:100px;"></td>
+            <td><img src="images/<?php echo $img; ?>"  style="max-width:100px;max-height:100px;"></td>
 
-            <td><a href="deleteitem.php?del=<?php echo $id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><a href="deleteitem.php?del1=<?php echo $id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
             </tr>  
       
             <?php } ?>  
@@ -82,5 +82,8 @@
         </div>
     </div>
 </div>  
+<?php
+    include("footer.php");
+?>
 </body>  
 </html>

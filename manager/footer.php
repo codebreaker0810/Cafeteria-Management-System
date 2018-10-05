@@ -12,7 +12,7 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   padding: 0px;
+   padding: 0px;  
    background-color: #333;
    color: white;
    text-align: center;
@@ -26,7 +26,6 @@
     <div class="text-center follow-us">
         Follow Us
     </div>
-    <br />
     <div class="text-center">
         <a class="fa fa-facebook social-icon" href="#" target="_blank"></a>
         <a class="fa fa-twitter social-icon" href="#" target="_blank"></a>
@@ -48,7 +47,7 @@
 
     .follow-us
     {
-        font-size: 30px;
+        font-size: 25px;
         color: #777;
     }
 

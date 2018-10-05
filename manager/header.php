@@ -28,7 +28,7 @@
     <li class="nav-item">
       <a class="nav-link" href="contact.php">Contact</a>
     </li>
-    <!-- Dropdown -->
+    <!-- Dropdown 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Dropdown link
@@ -38,11 +38,11 @@
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
       </div>
-    </li>
+    </li>-->
    
   </ul>
   <ul class="navbar-nav">
-    <li><a class="nav-link" href="profile.php?mid=<?php echo $_SESSION['mid'];?>"><span class="fa fa-user"></span><?php echo $_SESSION['username']; ?></a></li>
+    <li><a class="nav-link" href="profile.php?mid=<?php echo $_SESSION['mid'];?>"><span class="fa fa-user"></span> <?php echo $_SESSION['username']; ?></a></li>
     <li><a class="nav-link" href="logout.php"><span class="fa fa-sign-in"></span> Logout</a></li>
   </ul>
 

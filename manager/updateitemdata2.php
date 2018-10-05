@@ -15,12 +15,8 @@
 
     if($run==true)
     {  
-        ?>
-    	<script>
-    	alert('Data updated successfully');
-    	window.open('updateitemdata.php?id=<?php echo $id; ?>','_self');
-    	</script>
-    	<?php
+        header("location:updateitem.php?update=1");
+        
     }  
   
 	

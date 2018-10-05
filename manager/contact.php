@@ -140,6 +140,8 @@
 <!-- Contact with Map - END -->
 
 </div>
-
+<?php
+    include("footer.php");
+?>
 </body>
 </html>

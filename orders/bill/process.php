@@ -100,6 +100,7 @@ $query=mysqli_query($con, "UPDATE `ord` SET `status`='paid' where cid= ".$cid);
 
 
 */
+  echo "<h3>Thank You !! Visit Again</h3>";
 }
 else
 { 	echo "Direct Accees Prohibited";

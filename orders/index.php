@@ -24,7 +24,7 @@
   <body>
     <?php
     session_start();
-  include("../employee/header.php");
+  include("header.php");
   ?>
   <div c
  <div class="container pt-5">
@@ -69,7 +69,7 @@ if(isset($_GET['s']))
   </div>
   <div class="form-group">
     <label for="inputAddress2">Address </label>
-    <input type="text" name ="Address" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text" name ="Address" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
   </div><!--
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -238,5 +238,5 @@ var arr=[];
 <?php
   include("../manager/footer.php");
   ?>
-  <div c
+  <div>
 </html>

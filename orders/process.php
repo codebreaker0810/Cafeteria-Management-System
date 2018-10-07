@@ -41,6 +41,7 @@ for($i=0;$i<sizeof($data);$i++)
 	$query=mysqli_query($con, "INSERT INTO `contains`(`oid`, `iid`, `quantity`) VALUES (".$oid.",".$iid.",".$data[$i]->quantity.")");
 	// $data[i]->idesc;
 }?>
+<h3>Thank You !! Visit Again</h3>
 <script>
      <?php if(!isset($_SESSION['eid'])){ ?>alert('Username or password is incorrect !!');
     window.open('../employee/login.php','_self');

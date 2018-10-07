@@ -22,6 +22,11 @@
 
 
   <body>
+    <?php
+    session_start();
+  include("../employee/header.php");
+  ?>
+  <div c
  <div class="container pt-5">
   <div class="row justify-content-md-center">
   <div class="col-md-5  ">
@@ -229,4 +234,9 @@ var arr=[];
 }
 </style>
 </script>  
+<br>
+<?php
+  include("../manager/footer.php");
+  ?>
+  <div c
 </html>

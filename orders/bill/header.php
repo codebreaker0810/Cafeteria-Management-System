@@ -20,13 +20,13 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link" href="../employee/home.php">Home</a>
+      <a class="nav-link" href="../../employee/home.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../orders/bill/">Genrate Bill</a>
+      <a class="nav-link" href="../bill/">Genrate Bill</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../orders">Add Order</a>
+      <a class="nav-link" href="../">Add Order</a>
     </li>
     <!-- Dropdown 
     <li class="nav-item dropdown">
@@ -42,8 +42,8 @@
    -->
   </ul>
   <ul class="navbar-nav">
-    <li><a class="nav-link" href="../employee/profile.php?eid=<?php echo $_SESSION['eid'];?>"><span class="fa fa-user"></span></span> <?php echo $_SESSION['uname']; ?></a></li>
-    <li><a class="nav-link" href="../employee/logout.php"><span class="fa fa-sign-in"></span> Logout</a></li>
+    <li><a class="nav-link" href="../../employee/profile.php?eid=<?php echo $_SESSION['eid'];?>"><span class="fa fa-user"></span></span> <?php echo $_SESSION['uname']; ?></a></li>
+    <li><a class="nav-link" href="../../employee/logout.php"><span class="fa fa-sign-in"></span> Logout</a></li>
   </ul>
 
 </nav>

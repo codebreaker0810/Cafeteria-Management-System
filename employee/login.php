@@ -31,10 +31,10 @@
       <img class="mb-4" src="images\u3.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>    
     <div class="form-group">
-      <input type="text" name="user" class="form-control" placeholder="Useremail" required autofocus>
+      <input type="email" name="user" class="form-control" placeholder="Useremail" required autofocus>
     </div>
     <div class="form-group">
-      <input type="password" name="password" class="form-control" placeholder="Password" required>
+      <input type="password" name="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
     </div>
       <div class="checkbox mb-3">
         <label>

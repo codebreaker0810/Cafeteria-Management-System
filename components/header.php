@@ -28,8 +28,8 @@
       </li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Emp Login</a></li>
+      <li><a href="../manager/login.php"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+      <li><a href="../employee/login.php"><span class="glyphicon glyphicon-log-in"></span> Emp Login</a></li>
     </ul>
   </div>
 </nav>

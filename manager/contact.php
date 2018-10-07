@@ -82,10 +82,10 @@
                     <div class="card-block text-center">
                         <h4>Address</h4>
                         <div>
-                        2217 Washington Blvd<br />
-                        Washington DC<br />
-                        #(703) 1234 1234<br />
-                        service@company.com<br />
+                        2217 Kothrud<br />
+                        Pune MH<br />
+                        #(91) 021457532<br />
+                        service@cafeindia.com<br />
                         </div>
                         <hr />
                         <div id="map1" class="map">
@@ -98,12 +98,12 @@
 </div>
 
 
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 
 <script type="text/javascript">
     jQuery(function ($) {
         function init_map1() {
-            var myLocation = new google.maps.LatLng(38.885516, -77.09327200000001);
+            var myLocation = new google.maps.LatLng(18.5074, 73.8077);
             var mapOptions = {
                 center: myLocation,
                 zoom: 16
@@ -125,7 +125,7 @@
         min-width: 300px;
         min-height: 300px;
         width: 100%;
-        height: 100%;
+        height: 70%;
     }
 
     .header {

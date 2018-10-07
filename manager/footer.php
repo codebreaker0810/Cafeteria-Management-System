@@ -8,11 +8,12 @@
 
 <style>
 .footer1 {
-   position: fixed;
+   
    left: 0;
    bottom: 0;
    width: 100%;
    padding: 0px;  
+   padding-bottom: 0px;
    background-color: #333;
    color: white;
    text-align: center;

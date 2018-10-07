@@ -25,7 +25,7 @@
 <div class="container">
 
       <!-- Introduction Row -->
-      <h1 class="my-4">About Us
+      <h1 >About Us
         <small>It's Nice to Meet You!</small>
       </h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
@@ -35,31 +35,31 @@
         <div class="col-lg-12">
           <h2 class="my-4">Our Team</h2>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="images/emplogo.jpg" height="200" width="200" alt="">
           <h3>Sanket Nale
-            <small>Job Title</small>
+            <small>Developer</small>
           </h3>
           <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="images/emplogo.jpg" height="200" width="200" alt="">
           <h3>Suraj Kurlekar
-            <small>Job Title</small>
+            <small>Developer</small>
           </h3>
           <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+        <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="images/emplogo.jpg" height="200" width="200" alt="">
           <h3>Ashish Jaybhay
-            <small>Job Title</small>
+            <small>Developer</small>
           </h3>
           <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+     <div class="col-lg-3 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="images/emplogo.jpg" height="200" width="200" alt="">
           <h3>Rahul Adballe
-            <small>Job Title</small>
+            <small>Developer</small>
           </h3>
           <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
         </div>

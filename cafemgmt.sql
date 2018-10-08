@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 08:08 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: Oct 08, 2018 at 04:00 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,18 +34,6 @@ CREATE TABLE `bill` (
   `amount` int(11) NOT NULL,
   `btime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `bill`
---
-
-INSERT INTO `bill` (`bid`, `cid`, `amount`, `btime`) VALUES
-(1, 47, 1360, '2018-10-04 17:30:34'),
-(2, 47, 1360, '2018-10-04 17:31:18'),
-(3, 47, 1360, '2018-10-04 17:31:52'),
-(4, 47, 1360, '2018-10-04 17:32:16'),
-(5, 77, 280, '2018-10-04 17:46:14'),
-(6, 77, 40, '2018-10-04 17:49:40');
 
 -- --------------------------------------------------------
 
@@ -100,25 +88,6 @@ CREATE TABLE `contains` (
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `contains`
---
-
-INSERT INTO `contains` (`id`, `oid`, `iid`, `quantity`) VALUES
-(24, 28, 5, 6),
-(25, 28, 7, 5),
-(26, 32, 5, 6),
-(27, 32, 7, 6),
-(28, 33, 7, 8),
-(29, 33, 5, 4),
-(30, 35, 5, 4),
-(31, 35, 7, 2),
-(32, 36, 5, 2),
-(33, 61, 7, 1),
-(34, 61, 7, 1),
-(35, 60, 7, 1),
-(36, 65, 7, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -137,17 +106,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cid`, `name`, `pno`, `address`) VALUES
-(1, 'ABC', 98875788, 'Pune'),
-(46, 'apple', 8888888888, 'Katraj'),
-(47, 'Cust1', 9999999999, 'Pune'),
-(52, 'A', 999999999, 's'),
-(77, 'Omkar', 9876543210, 'Pune'),
-(78, 'Omkar Thorat', 9970525069, 'Daund Pune'),
-(84, 'a', 5, 'c'),
-(85, 's', 4, '5'),
-(92, 'a', 1, 'aq'),
-(99, 'a', 2, 's'),
-(100, 'L', 987554664, 'a');
+(103, 'Rahul', 7771234567, 'Katraj,Pune'),
+(104, 'Sachin', 8812345678, 'Kothrud, pune');
 
 -- --------------------------------------------------------
 
@@ -169,8 +129,9 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`eid`, `name`, `phone`, `mail`, `password`, `mid`) VALUES
-(11, 'ab', 7812345678, 'ab@a.c', 'Ab123@ac', 1),
-(14, 'rahul', 7212345643, 'rahul@a.c', 'Rahul@123', 1);
+(17, 'Ramesh', 9123456789, 'ramesh@cafe.com', 'Ramesh123', 1),
+(18, 'Suresh', 8123456789, 'suresh@cafe.com', 'Suresh123', 1),
+(19, 'Mahesh', 7123456789, 'mahesh@cafe.com', 'Mahesh123', 1);
 
 -- --------------------------------------------------------
 
@@ -190,10 +151,10 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`iid`, `idesc`, `price`, `img`) VALUES
-(4, 'apple', 14, 'ass1.png'),
-(5, 'fries', 60, '3d_bars-2560x1440.jpg'),
-(7, 'bread', 20, 'titanfall_2_hd-HD.jpg'),
-(8, 'Vada_Pav', 10, 'vada-pav-pakwangali_520_020216111040.jpg');
+(9, 'Big Crunch Chicken Cheese Burger', 50, 'i3.jpg'),
+(10, 'Big Crunch Veg Cheese Burger', 40, 'i4.jpg'),
+(11, 'Crispy Veg Wrap', 80, 'i6.jpg'),
+(12, 'Fruit Trifle Cup', 45, 'i12.jpg');
 
 -- --------------------------------------------------------
 
@@ -214,8 +175,8 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`mid`, `name`, `pno`, `password`, `cfid`) VALUES
-(1, 'admin', 88, 'admin', 1),
-(3, 'manager2', 8745126451, 'admin', 2);
+(1, 'admin', 7712345678, 'admin', 1),
+(3, 'manager', 8745126451, 'manager', 2);
 
 -- --------------------------------------------------------
 
@@ -237,44 +198,8 @@ CREATE TABLE `ord` (
 --
 
 INSERT INTO `ord` (`oid`, `no_of_item`, `eid`, `status`, `cid`, `otime`) VALUES
-(28, 4, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(29, 4, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(30, 4, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(31, 4, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(32, 8, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(33, 0, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(34, 3, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(35, 2, 14, 'paid', 77, '2018-10-04 17:11:27'),
-(36, 0, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(37, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(38, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(39, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(40, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(41, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(42, 1, 14, 'unpaid', 84, '2018-10-04 17:11:27'),
-(43, 1, 14, 'unpaid', 85, '2018-10-04 17:11:27'),
-(44, 2, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(45, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(46, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(47, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(48, 1, 14, 'unpaid', 78, '2018-10-04 17:11:27'),
-(49, 1, 14, 'unpaid', 84, '2018-10-04 17:11:27'),
-(50, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(51, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(52, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(53, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(54, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(55, 0, 14, 'unpaid', 92, '2018-10-04 17:11:27'),
-(56, 0, 14, 'unpaid', 84, '2018-10-04 17:11:27'),
-(57, 1, 14, 'unpaid', 99, '2018-10-04 17:11:27'),
-(58, 1, 14, 'unpaid', 100, '2018-10-04 17:11:27'),
-(59, 1, 14, 'unpaid', 100, '2018-10-04 17:11:27'),
-(60, 1, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(61, 1, 14, 'unpaid', 52, '2018-10-04 17:11:27'),
-(62, 1, 14, 'unpaid', 52, '2018-10-04 17:11:27'),
-(63, 1, 14, 'unpaid', 52, '2018-10-04 17:11:27'),
-(64, 1, 14, 'paid', 47, '2018-10-04 17:11:27'),
-(65, 1, 14, 'paid', 77, '2018-10-04 17:49:21');
+(68, 2, 17, 'unpaid', 103, '2018-10-08 19:25:43'),
+(69, 2, 17, 'unpaid', 104, '2018-10-08 19:28:53');
 
 --
 -- Indexes for dumped tables
@@ -352,7 +277,7 @@ ALTER TABLE `ord`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cafe`
@@ -364,25 +289,25 @@ ALTER TABLE `cafe`
 -- AUTO_INCREMENT for table `contains`
 --
 ALTER TABLE `contains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `manager`
@@ -394,7 +319,7 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `ord`
 --
 ALTER TABLE `ord`
-  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- Constraints for dumped tables

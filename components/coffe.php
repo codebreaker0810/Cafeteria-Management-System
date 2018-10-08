@@ -10,14 +10,13 @@
   <nav class="navbar navbar-inverse" background-color:#F8F8F8; style="padding: 10px;"> 
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Coffe</a>
+      <a class="navbar-brand" href="#">Coffee</a>
       
     </div>
 </div>
 </nav>
 <figure class="figure">
   <img src="coffe2.jpg" style="height: 800px; width: 100%;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption">Coffes</figcaption>
-</figure>
+  </figure>
 </head>
 </html>

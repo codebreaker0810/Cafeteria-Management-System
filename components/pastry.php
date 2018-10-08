@@ -17,7 +17,7 @@
 </nav>
 <figure class="figure">
   <img src="pastries2.jpg" style="height: 800px; width: 100%;"  class="figure-img img-fluid rounded" >
-  <figcaption class="figure-caption text-align="center">Pastries</figcaption>
+ 
 </figure>
 </head>
 </html>

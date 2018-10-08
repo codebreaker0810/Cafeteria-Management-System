@@ -11,7 +11,7 @@
 <div class="row">
 
 	  <div class="col-sm-4 py-2">
-            <div class="card h-100 border-primary">
+            <div class="card border-primary">
                 <div class="card-body">
                     <h3 class="card-title">Primary</h3>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>

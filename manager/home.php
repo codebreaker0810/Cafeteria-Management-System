@@ -108,10 +108,29 @@
    			    </div>
             </div>
         </div>
-   
-  
+    
+</div>
+<hr>
+    <br>
+    
+    <div class="row">
+
+      <div class="col-sm-4 py-2">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h3 class="card-title">View bills</h3>
+                    <p class="card-text">View all bill details.</p>
+                    <a href="viewbill.php" class="btn btn-outline-secondary" >View</a>
+                </div>
+                <div class="card-footer">
+                 <small>Click on button to view</small>
+                </div>
+            </div>
+        </div>
 </div>
 </div>
+<hr>
+
 <?php
 	include("footer.php");
 ?>

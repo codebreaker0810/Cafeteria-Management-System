@@ -14,12 +14,7 @@ include("dbcon.php");//make connection here
 
     if($run==true)
     { 
-    	?>
-    	<script>
-    	alert('Data updated successfully');
-    	window.open('updateemp.php?eid=<?php echo $id; ?>','_self');
-    	</script>
-    	<?php
-    }   
+            header("location:update.php?update=1");  	
+     }   
   
 ?>

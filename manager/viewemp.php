@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -24,6 +24,9 @@
 </style>  
   
 <body>  
+    <?php
+    include("header.php");
+    ?>
 <div class="container">  
 <div class="table-scrol">  
     <h1 align="center">All the Employee</h1>  
@@ -87,7 +90,9 @@
         </div>  
 </div>  
 </div>  
-  
+  <?php
+    include("footer.php");
+?>
 </body>  
   
 </html>

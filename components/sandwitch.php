@@ -16,8 +16,10 @@
 </div>
 </nav>
 <figure class="figure">
-  <img src="sandwich.jpg"  height="100"  width="1600" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+  <img src="sandwich.jpg" style="height: 800px; width: 100%;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
   <figcaption class="figure-caption">Alcoholic Bevreges</figcaption>
 </figure>
+
+<
 </head>
 </html>

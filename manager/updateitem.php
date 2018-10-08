@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -12,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
     <title>View Items</title>  
 </head>  
-<style>  
+ <style>  
     .login-panel {  
         margin-top: 150px;  
     }  
@@ -21,10 +21,24 @@
   
     }  
   
-</style>  
-  
+</style> 
 <body>  
-<div align="center">  
+    <?php
+    include("header.php");
+    ?>
+<div align="center">
+ <br>
+    <?php
+    if(isset($_GET['update'])==true)
+    {
+    ?>
+    <div class="alert alert-success">
+      <a href="viewemp.php" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong>Data updated successfully
+    </div>
+    <?php
+    }
+  ?>  
 <h3 class="panel-title">Update Item details</h3> <br> 
     <div class="panel-body">  
         <form role="form" method="post" action="updateitem.php">  
@@ -87,6 +101,9 @@
     </div>
     </div>
 </div>
+<?php
+    include("footer.php");
+?>
 </body>
 </html>
 

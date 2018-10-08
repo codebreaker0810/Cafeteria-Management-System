@@ -10,7 +10,7 @@
   <style type="text/css">
   	.cur{
   		margin-top: 10px;
-  		padding: 20px; 
+  		 margin-bottom: 20px;
       height: 120%;
       width: 100%;
   	}
@@ -28,18 +28,18 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" >
+    <div class="carousel-inner" style="height: 500px;" >
 
       <div class="item active">
-        <img class="first-slide "src="images\2.jpg"  style="width:50%;">
+        <img class="first-slide "src="b1.jpg"  style="height: 500px; width: 100%;">
         <div class="carousel-caption">
           <h3>50% OFF</h3>
-          <p>For new user!</p>
+          <p>For new user!</p> 
         </div>
       </div>
 
       <div class="item">
-        <img class="second-slide " src="images\3.jpg"   style="width:50%;" >
+        <img class="second-slide " src="b2.jpg" style="height: 500px; width: 100%;"   >
         <div class="carousel-caption">
           <h3>30% OFF</h3>
           <p>On minimum order 100!</p>
@@ -47,7 +47,7 @@
       </div>
     
       <div class="item">
-        <img class="third-slide " src="images\4.jpg"   style="width:50%;">
+        <img class="third-slide " src="b3.jpg" style="height: 500px; width: 100%;"    >
         <div class="carousel-caption">
           <h3>40% OFF</h3>
           <p>For first Three orders!</p>

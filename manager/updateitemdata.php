@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -28,17 +28,19 @@ include("dbcon.php");
 </head>  
 
 <body>  
-  
+  <?php
+    include("header.php");
+    ?>
 <div class="container pt-5">
     <div class="row justify-content-md-center">
         <div class="col-md-5  ">
             <div class="card">
                 <div class="card-body"> 
-                    <h3 class="panel-title">Insert Item details</h3>  
+                    <h3 class="panel-title">Update Item details</h3>  
                     <form role="form" method="post" action="updateitemdata2.php" enctype="multipart/form-data">  
                         <fieldset>  
                             <div class="form-group">  
-                               Enter Item desc/name: <input class="form-control" name="name" type="text" value=<?php echo $data['idesc']; ?> pattern="[A-Za-z ]{1-32}" title="Only Letters and spaces allowed" required autofocus>
+                               Enter Item desc/name: <input class="form-control" name="name" type="text" value=<?php echo $data['idesc']; ?> pattern="[A-Za-z ]{1-32}" title="Only Letters and spaces allowed" readonly="readonly" required autofocus>
                             </div>  
                             <div class="form-group">  
                                Enter Item price: <input class="form-control" name="price" type="text" value=<?php echo $data['price']; ?> pattern="\d+(\.\d+)?" required>  
@@ -47,7 +49,7 @@ include("dbcon.php");
                                Upload image: <input class="form-control" name="img" type="file" required>  
                             </div>   
                             <input name="id" type="hidden" value=<?php echo $data['iid']; ?> >
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="submit" name="submit" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="submit" >  
   
                         </fieldset>  
                     </form>  
@@ -56,7 +58,9 @@ include("dbcon.php");
         </div>  
     </div>  
 </div>  
-  
+  <?php
+    include("footer.php");
+?>
 </body>  
   
 </html>  

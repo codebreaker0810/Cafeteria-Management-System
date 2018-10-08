@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
  ?>
@@ -16,7 +16,10 @@
     <title>Insertion</title>  
 </head>  
  
-<body>  
+<body> 
+<?php
+    include("header.php");
+    ?> 
  <div class="container pt-5">
     <div class="row justify-content-md-center">
         <div class="col-md-5  ">
@@ -34,7 +37,7 @@
                             <div class="form-group">  
                                Upload image: <input class="form-control" name="img" type="file" required>  
                             </div>   
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="submit" name="submit" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Add" name="submit" >  
   
                         </fieldset>  
                     </form>  
@@ -43,7 +46,9 @@
         </div>  
     </div>  
 </div>  
-  
+ <?php
+    include("footer.php");
+?> 
 </body>  
   
 </html>  

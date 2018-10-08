@@ -1,7 +1,7 @@
 <?php
  
  session_start();
- if(!isset($_SESSION['username'])){
+ if(!isset($_SESSION['mid'])){
     header('location:login.php');
  }
 ?>
@@ -15,7 +15,9 @@ include("dbcon.php");
     $run=mysqli_query($con,$sql);  
 
     $data=mysqli_fetch_assoc($run);
+
 ?>
+
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
@@ -28,7 +30,9 @@ include("dbcon.php");
 </head>  
  
 <body>  
-
+<?php
+    include("header.php");
+    ?>
 <div class="container pt-5">
     <div class="row justify-content-md-center">
         <div class="col-md-5  ">
@@ -44,13 +48,13 @@ include("dbcon.php");
                               Enter phone: <input class="form-control" name="phone" type="text" value=<?php echo $data['phone']; ?> pattern="[789][0-9]{9}" title="Enter valid Phone number" required>  
                             </div> 
                             <div class="form-group">  
-                              Enter email: <input class="form-control" name="email" type="email" value=<?php echo $data['mail']; ?> required>  
+                              Enter email: <input class="form-control" name="email" type="email" readonly="readonly" value=<?php echo $data['mail']; ?> required>  
                             </div>  
                             <div class="form-group">  
-                              Enter password: <input class="form-control" name="pass" type="password" value=<?php echo $data['password']; ?> pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
+                              Enter password: <input class="form-control" name="pass" type="password" value=<?php echo $data['password']; ?> pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
                             </div>
                             <input name="eid" type="hidden" value=<?php echo $data['eid']; ?> >    
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="register" name="register" >  
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Update" name="register" >  
   
                         </fieldset>  
                     </form>  
@@ -58,7 +62,10 @@ include("dbcon.php");
             </div>  
         </div>  
     </div>  
-</div>  
+</div> 
+<?php
+    include("footer.php");
+?> 
 </body>  
   
 </html>  

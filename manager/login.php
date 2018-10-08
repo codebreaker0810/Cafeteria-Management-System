@@ -44,7 +44,7 @@
       <input type="text" name="user" class="form-control" placeholder="Username" required autofocus>
       </div>
       <div class="form-group"> 
-      <input type="password" name="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+      <input type="password" name="password" class="form-control" placeholder="Password"  required>
     </div>
       <div class="checkbox mb-3">
         <label>

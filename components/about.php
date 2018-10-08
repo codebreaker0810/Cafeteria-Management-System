@@ -25,7 +25,7 @@
       <h1 >About Us
         <small>It's Nice to Meet You!</small>
       </h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+      <p> We strive to provide the best experience to our guests. Our coffees are sourced from thousands of small coffee planters, who made us who we are today and we're glad to be a part of their lives. We opened our first cafe in 2018 at Paud Road in Pune – the youth and the young at heart immediately took to the cafe, and it continues to be one of the most happening places in the city.Cafeteria to the youth is a “hangout” spot where they meet people, make conversations, and have a whole lot of fun over steaming cups of great coffee.</p>
 
       <!-- Team Members Row -->
       <div class="row">

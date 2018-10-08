@@ -73,7 +73,7 @@
             <td><?php echo $price;  ?></td>
             <td><img src="images/<?php echo $img; ?>"  style="max-width:100px;max-height:100px;"></td>
 
-            <td><a href="deleteitem.php?del1=<?php echo $id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><a href="deleteitem.php?del1=<?php echo $id ?>"><button class="btn btn-danger"><span class="fa fa-trash"></span> Delete</button></a></td> 
             </tr>  
       
             <?php } ?>  

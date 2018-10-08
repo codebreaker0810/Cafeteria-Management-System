@@ -81,7 +81,7 @@
             <td><?php echo $user_email;  ?></td>  
             <td><?php echo $user_phone;  ?></td>
             <td><?php echo $user_pass;  ?></td>  
-            <td><a href="deleteemp.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><a href="deleteemp.php?del=<?php echo $user_id ?>"><button class="btn btn-danger"><span class="fa fa-trash"></span> Delete</button></a></td> 
         </tr>  
   
         <?php } ?>  

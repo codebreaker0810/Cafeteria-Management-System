@@ -90,7 +90,7 @@
                     <td><?php echo $data['idesc'];  ?></td>  
                     <td><?php echo $data['price'];  ?></td>  
                     <td><img src="images/<?php echo $data['img']; ?>"  style="max-width:100px;"></td>
-                    <td><a href="updateitemdata.php?id=<?php echo $data['iid'];?>"><button class="btn btn-warning">Update</button></a></td>  
+                    <td><a href="updateitemdata.php?id=<?php echo $data['iid'];?>"><button class="btn btn-warning"><span class="fa fa-edit"></span> Update</button></a></td>  
                 </tr>
                 <?php
                 }

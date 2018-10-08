@@ -1,9 +1,6 @@
 <?php
  
- session_start();
- if(!isset($_SESSION['mid'])){
-    header('location:login.php');
- }
+
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +70,8 @@
                         </div>
                     </fieldset>
                 </form>
+              <p style="text-align: center;color: #999;padding: 0 20px;font-family: 'gotham-book';font-size:18px;"><strong style="color:#333;">Alternatively, you can reach out to us at:</strong> <br/><a href="mailto:customercare@cafe.com" style="color:#dc4348;font-family: 'gotham-medium';" >customercare@cafecoffeeday.com</a> <br />1800 102 5093 (9 AM to 11 PM |  Monday - Sunday)</p>
+    
             </div>
         </div>
         <div class="col-md-6">

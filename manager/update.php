@@ -9,7 +9,8 @@
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
-    <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
     <title>View Users</title>  
 </head>  
 <style>  
@@ -94,7 +95,7 @@
                 <td><?php echo $data['mail'];  ?></td>  
                 <td><?php echo $data['phone'];  ?></td>
                 <td><?php echo $data['password'];  ?></td>
-                <td><a href="updateemp.php?eid=<?php echo $data['eid'];?>"><button class="btn btn-warning">Update</button></a></td>  
+                <td><a href="updateemp.php?eid=<?php echo $data['eid'];?>"><button class="btn btn-warning"><span class="fa fa-edit"></span> Update</button></a></td>  
            </tr>
            <?php
             }

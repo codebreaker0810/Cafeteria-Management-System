@@ -4,7 +4,7 @@ $cid;
 $no_of_items;
 session_start();
 if(isset($_POST['pno']))
-{
+{echo "<center><div class='main1'>";
  	$query=mysqli_query($con, "SELECT * FROM customer WHERE pno=".$_POST['pno']);
 	$row=mysqli_fetch_assoc($query);
 	$cid=$row['cid'];
@@ -16,7 +16,7 @@ if(isset($_POST['pno']))
 $query=mysqli_query($con, "SELECT name,address FROM `cafe` WHERE cfid =( SELECT cfid from manager WHERE mid= (SELECT mid from employee where eid= ".$_SESSION['eid']."))");
 
 	$row=mysqli_fetch_assoc($query);
-	echo "<center><a1>".$row['name']."</a1><br><a2>  Address:".$row['address']."</a2>";
+	echo "<a1>".$row['name']."</a1><br><a2>  Address:".$row['address']."</a2>";
 	$query=mysqli_query($con, "SELECT pno,email FROM `contact` WHERE cfid =( SELECT cfid from manager WHERE mid= (SELECT mid from employee where eid= ".$_SESSION['eid']."))");
 	$row=mysqli_fetch_assoc($query);
 
@@ -65,11 +65,18 @@ $query=mysqli_query($con, "SELECT name,address FROM `cafe` WHERE cfid =( SELECT 
       
       
       ?>
+      <?php  if ($total>1000) { echo "<tr><td></td>"; ?>
+            
+            <td style="border-right: none;"><?php  ?></td>
+            <td ><?php echo "Voila You Got Discount 10% OFF"?></td>
+            <td><?php  echo "-".$total*0.1; $total= ($total-$total*0.1);?></td>
+        </tr>
+      <?php } ?>
         <tr><td><?php ?></td>
             
             <td style="border-right: none;"><?php  ?></td>
             <td ><?php echo "Total"?></td>
-            <td><?php echo $total; ?></td>
+            <td><?php  echo $total; ?></td>
         </tr>
 
 
@@ -79,8 +86,9 @@ $query=mysqli_query($con, "SELECT name,address FROM `cafe` WHERE cfid =( SELECT 
 
 
 <?php
+if($total!=0){
 $query=mysqli_query($con, "INSERT INTO `bill`(`cid`, `amount`) VALUES (".$cid.",".$total.")");
-$query=mysqli_query($con, "UPDATE `ord` SET `status`='paid' where cid= ".$cid);
+$query=mysqli_query($con, "UPDATE `ord` SET `status`='paid' where cid= ".$cid); }
 //echo "UPDATE `ord` SET `status`='paid' where cid= ".$cid."";
 
 /*
@@ -100,7 +108,7 @@ $query=mysqli_query($con, "UPDATE `ord` SET `status`='paid' where cid= ".$cid);
 
 
 */
-  echo "<h3>Thank You !! Visit Again</h3>";
+  echo "<h3>Thank You !! Visit Again</h3> <button onclick=window.close() >Close</button><br><br>";
 }
 else
 { 	echo "Direct Accees Prohibited";
@@ -109,7 +117,7 @@ else
 ?>
 <style>
 table { align-content: center;
-    width:50%;
+    width:90%;
 }
 table, th, td {
     border: 1px solid black;
@@ -155,5 +163,32 @@ a2
 
 
 }
+
+
+
+.main1
+{
+  border:solid 1px; 
+  width:75%;
+}
 </style>
-<script type="text/javascript"> window.print(); </script>
+
+<script type="text/javascript">
+var css = '@page { size: landscape; }',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+style.type = 'text/css';
+style.media = 'print';
+
+if (style.styleSheet){
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+
+head.appendChild(style);
+ window.print();
+
+  </script>
+</div>

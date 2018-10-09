@@ -30,13 +30,13 @@
   ?>
  <div class="container pt-5">
   <div class="row justify-content-md-center">
-  <div class="col-md-5  ">
+  
  <div class="card">
   <div class="card-body">  
 <h2 align="center">Bill Genration</h2><br>
  
     </head>
-    <body>
+      
      
 <?php
 include('../dbconn.php');	
@@ -78,7 +78,7 @@ $query=mysqli_query($con, "SELECT * FROM `contains` NATURAL JOIN ord HAVING cid=
        if(mysqli_num_rows($query)){
 
   ?>
-<div class='form-group'>
+
     
 
     <table class='table table-bordered table-hover' id='tab_logic'>
@@ -127,7 +127,7 @@ $query=mysqli_query($con, "SELECT * FROM `contains` NATURAL JOIN ord HAVING cid=
         <tbody> </tbody>
        
       </table>
-    </div>
+    </div> 
   <?php
 if(mysqli_num_rows($query)){
 echo "<button type='submit' class='btn btn-primary'  >Paid & Print Bill </button>";
@@ -138,10 +138,12 @@ echo "<button type='submit' class='btn btn-primary'  >Paid & Print Bill </button
  <?php }else{ ?>
 <button type="submit" class="btn btn-primary"  >View Bill </button>
 	
-</form>	
+</form>
+</div></div></div></body>
 <?Php
 }
 ?>
 <script type="text/javascript">
 	document.getElementById('pno').value=<?php echo $_POST['pno']?>;
 </script>
+</html>

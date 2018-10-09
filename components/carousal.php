@@ -29,22 +29,22 @@
     <div class="carousel-item active">
       <img src="b1.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
-        <h3>50% OFF</h3>
-        <p>For new user!</p>
+        <h3>10% OFF</h3>
+        <p>*ON ORDERS ABOVE 1000!</p>
       </div>   
     </div>
     <div class="carousel-item">
       <img src="b2.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
-        <h3>30% OFF</h3>
-        <p>On minimum order 100!</p>
+       <h3>10% OFF</h3>
+        <p>*ON ORDERS ABOVE 1000!</p>
       </div>   
     </div>
     <div class="carousel-item">
       <img src="b3.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
-        <h3>40% OFF</h3>
-        <p>For first Three orders!</p>
+       <h3>10% OFF</h3>
+        <p>*ON ORDERS ABOVE 1000!</p>
       </div>   
     </div>
   </div>

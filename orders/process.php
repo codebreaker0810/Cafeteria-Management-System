@@ -27,10 +27,10 @@ if(isset($_POST['pno'])){
 if(isset($_SESSION['eid']))
 {
 	$query=mysqli_query($con, "INSERT INTO `ord`(`no_of_item`, `eid`, `cid`) VALUES (".sizeof($data).",".$_SESSION['eid'].",".$cid.")");
-	$query=mysqli_query($con,"select oid from `ord` where no_of_item=".sizeof($data)." AND eid=".$eid." AND cid=".$cid);
+	$query=mysqli_query($con,"select oid from `ord` where no_of_item=".sizeof($data)." AND eid=".$eid." AND cid=".$cid." AND status='unpaid'");
 	$row=mysqli_fetch_assoc($query);
 	$oid=$row['oid'];
-//echo mysqli_error($con);
+//echo "INSERT INTO `ord`(`no_of_item`, `eid`, `cid`) VALUES (".sizeof($data).",".$_SESSION['eid'].",".$cid.")";
 }
 //var_dump( $data);
 for($i=0;$i<sizeof($data);$i++)
@@ -40,8 +40,9 @@ for($i=0;$i<sizeof($data);$i++)
 	$iid=$row['iid'];
 	$query=mysqli_query($con, "INSERT INTO `contains`(`oid`, `iid`, `quantity`) VALUES (".$oid.",".$iid.",".$data[$i]->quantity.")");
 	// $data[i]->idesc;
+	echo "INSERT INTO `contains`(`oid`, `iid`, `quantity`) VALUES (".$oid.",".$iid.",".$data[$i]->quantity.")";
 }?>
-<h3>Thank You !! Visit Again</h3>
+
 <script>
      <?php if(!isset($_SESSION['eid'])){ ?>alert('Username or password is incorrect !!');
     window.open('../employee/login.php','_self');
@@ -49,5 +50,6 @@ for($i=0;$i<sizeof($data);$i++)
     </script>
     <?php
 }
+//echo mysql_error($con);
     header('location:index.php?s=1');
     ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2018 at 04:00 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Oct 09, 2018 at 09:49 PM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,6 +35,35 @@ CREATE TABLE `bill` (
   `btime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `bill`
+--
+
+INSERT INTO `bill` (`bid`, `cid`, `amount`, `btime`) VALUES
+(9, 105, 80, '2018-10-09 22:39:00'),
+(10, 113, 36000, '2018-10-09 22:57:57'),
+(11, 105, 72000, '2018-10-09 23:05:14'),
+(32, 105, 64800, '2018-10-09 23:30:47'),
+(33, 105, 32692, '2018-10-10 00:01:42'),
+(34, 122, 4050, '2018-10-10 00:06:29'),
+(42, 105, 32805, '2018-10-10 00:24:37'),
+(43, 105, 32400, '2018-10-10 00:26:41'),
+(44, 105, 80, '2018-10-10 00:28:04'),
+(61, 122, 160, '2018-10-10 00:49:56'),
+(62, 128, 8639, '2018-10-10 00:57:14');
+
+--
+-- Triggers `bill`
+--
+DELIMITER $$
+CREATE TRIGGER `discount_trigger` BEFORE INSERT ON `bill` FOR EACH ROW begin
+     if new.amount >1000 then 
+     set new.amount = (new.amount - new.amount*0.10);
+     end if;
+    END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -52,8 +81,8 @@ CREATE TABLE `cafe` (
 --
 
 INSERT INTO `cafe` (`cfid`, `name`, `address`) VALUES
-(1, 'CAFE1', 'Pune'),
-(2, 'CAFE2', 'Pune2');
+(1, 'Boston Barista Express', 'Pune'),
+(2, 'Lava Java', 'Kothrud');
 
 -- --------------------------------------------------------
 
@@ -88,6 +117,34 @@ CREATE TABLE `contains` (
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `contains`
+--
+
+INSERT INTO `contains` (`id`, `oid`, `iid`, `quantity`) VALUES
+(41, 76, 11, 1),
+(42, 76, 11, 1),
+(43, 76, 11, 74),
+(44, 79, 10, 1000),
+(45, 76, 11, 1000),
+(46, 76, 11, 2000),
+(47, 76, 11, 1000),
+(48, 76, 11, 1000),
+(49, 76, 11, 1000),
+(50, 77, 11, 1000),
+(51, 85, 11, 1000),
+(52, 86, 10, 9),
+(53, 86, 11, 500),
+(54, 88, 9, 100),
+(56, 90, 12, 900),
+(57, 91, 10, 1000),
+(58, 92, 10, 2),
+(59, 93, 10, 4),
+(60, 94, 10, 7),
+(61, 94, 12, 5),
+(62, 94, 11, 2),
+(63, 94, 9, 200);
+
 -- --------------------------------------------------------
 
 --
@@ -107,7 +164,12 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`cid`, `name`, `pno`, `address`) VALUES
 (103, 'Rahul', 7771234567, 'Katraj,Pune'),
-(104, 'Sachin', 8812345678, 'Kothrud, pune');
+(104, 'Sachin', 8812345678, 'Kothrud, pune'),
+(105, 'SAnket', 8806852775, 'Pune'),
+(113, 'Sanket', 8806852776, 'Pune'),
+(122, 'Omkar', 9970808317, 'Pune'),
+(123, 'a', 9876543210, 'k'),
+(128, 'Rahul', 7777777777, 'Pune');
 
 -- --------------------------------------------------------
 
@@ -151,10 +213,10 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`iid`, `idesc`, `price`, `img`) VALUES
-(9, 'Big Crunch Chicken Cheese Burger', 50, 'i3.jpg'),
-(10, 'Big Crunch Veg Cheese Burger', 40, 'i4.jpg'),
-(11, 'Crispy Veg Wrap', 80, 'i6.jpg'),
-(12, 'Fruit Trifle Cup', 45, 'i12.jpg');
+(9, 'Big_Crunch_Chicken_Cheese_Burger', 50, 'i3.jpg'),
+(10, 'Big_Crunch_Veg_Cheese_Burger', 40, 'i4.jpg'),
+(11, 'Crispy_Veg_Wrap', 80, 'i6.jpg'),
+(12, 'Fruit_Trifle_Cup', 45, 'i12.jpg');
 
 -- --------------------------------------------------------
 
@@ -198,8 +260,24 @@ CREATE TABLE `ord` (
 --
 
 INSERT INTO `ord` (`oid`, `no_of_item`, `eid`, `status`, `cid`, `otime`) VALUES
-(68, 2, 17, 'unpaid', 103, '2018-10-08 19:25:43'),
-(69, 2, 17, 'unpaid', 104, '2018-10-08 19:28:53');
+(76, 1, 17, 'paid', 105, '2018-10-09 22:38:47'),
+(77, 1, 17, 'paid', 105, '2018-10-09 22:55:50'),
+(78, 1, 17, 'paid', 105, '2018-10-09 22:56:11'),
+(79, 1, 17, 'paid', 113, '2018-10-09 22:57:35'),
+(80, 1, 17, 'paid', 105, '2018-10-09 22:59:27'),
+(81, 1, 17, 'paid', 105, '2018-10-09 23:00:10'),
+(82, 1, 17, 'paid', 105, '2018-10-09 23:01:40'),
+(83, 1, 17, 'paid', 105, '2018-10-09 23:03:10'),
+(84, 1, 17, 'paid', 105, '2018-10-09 23:04:56'),
+(85, 1, 17, 'paid', 105, '2018-10-09 23:29:42'),
+(86, 1, 17, 'paid', 105, '2018-10-09 23:46:45'),
+(87, 1, 17, 'paid', 105, '2018-10-09 23:47:04'),
+(88, 1, 17, 'paid', 122, '2018-10-10 00:05:38'),
+(90, 1, 17, 'paid', 105, '2018-10-10 00:24:19'),
+(91, 1, 17, 'paid', 105, '2018-10-10 00:25:42'),
+(92, 1, 17, 'paid', 105, '2018-10-10 00:27:52'),
+(93, 1, 17, 'paid', 122, '2018-10-10 00:49:49'),
+(94, 4, 17, 'paid', 128, '2018-10-10 00:56:45');
 
 --
 -- Indexes for dumped tables
@@ -277,7 +355,7 @@ ALTER TABLE `ord`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `cafe`
@@ -289,13 +367,13 @@ ALTER TABLE `cafe`
 -- AUTO_INCREMENT for table `contains`
 --
 ALTER TABLE `contains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -319,7 +397,7 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `ord`
 --
 ALTER TABLE `ord`
-  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- Constraints for dumped tables

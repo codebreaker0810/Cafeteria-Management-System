@@ -1,99 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+.footer1 {
+   
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 0px;  
+   padding-bottom: 0px;
+   background-color: #333;
+   color: white;
+   text-align: center;
+}
+</style>
 </head>
 <body>
 
-  <footer class=" page-footer font-small blue mt-4">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row"  >
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content.</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
+<div class="footer1">
+<div class="container follow-us-container">
+    <div class="text-center follow-us">
+        Follow Us
     </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    <div class="text-center">
+        <a class="fa fa-facebook social-icon" href="#" target="_blank"></a>
+        <a class="fa fa-twitter social-icon" href="#" target="_blank"></a>
+        <a class="fa fa-linkedin social-icon" href="#" target="_blank"></a>
+        <a class="fa fa-google-plus social-icon" href="#" target="_blank"></a>
     </div>
-    <!-- Copyright -->
 
-  </footer>
+  <p>All rights reserved &copy MIT-COE 2018</p>
 
-  </body>
-</html>
+
+</div>
+
+<style>
+    .follow-us-container
+    {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .follow-us
+    {
+        font-size: 25px;
+        color: #777;
+    }
+
+    .social-icon
+    {
+        padding-top: 6px;
+        font-size: 16px;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #777;
+        border-radius: 50%;
+        color: #777;
+        margin: 5px;
+    }
+
+    a.social-icon:hover, a.social-icon:active, a.social-icon:focus
+    {
+        text-decoration: none;
+        color: #434343;
+        border-color: #434343;
+    }
+</style>
+
+</div>
+
+</body>
+</html> 

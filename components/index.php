@@ -27,6 +27,7 @@
 	  <?php
 	  	include("header.php");
 	  	include("carousal.php");
+	  	include("menu.php");
 	  	/*
 	  	include("bevreges.php");
 	  	include("coffe.php");

@@ -12,16 +12,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
  
 </head>	
-	<body>
+<style>
+.fixed-bg {
+    background-image: url("images/cafe.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+	<body class="fixed-bg">
 		
 	  <?php
 	  	include("header.php");
 	  	include("carousal.php");
-	  	
+	  	/*
 	  	include("bevreges.php");
 	  	include("coffe.php");
 	  	include("sandwitch.php");
-	  	include("pastry.php");
+	  	include("pastry.php");*/
+	  	
 	  	include("footer.php");
 	  ?>
       

@@ -15,24 +15,27 @@
 	<body>
 		
 	  <?php
+
 	  	include("header.php");
 	  	include("carousal.php");
 	  	
-	  	include("bevreges.php");
-	  	include("coffe.php");
-	  	include("sandwitch.php");
-	  	include("pastry.php");
-	  	include("footer.php");
-	  ?>
+
+	  	?>
+        <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
+           <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Menus</a>
+         <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
+           <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Bevereges</a>
+          </div>    
+          </div>
+        </nav>
+      </body>
+      </html>
+    
       
+
   
-             
   
-</div>
-
-</body>
-
-</html>    
-
 
 

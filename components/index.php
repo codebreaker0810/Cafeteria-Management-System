@@ -12,28 +12,70 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
  
 </head>	
-	<body>
+<style>
+.fixed-bg {
+    background-image: url("images/cafe.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+	<body class="fixed-bg">
 		
 	  <?php
 
 	  	include("header.php");
 	  	include("carousal.php");
+
 	  	
 
 	  	?>
-        <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
-           <div class="navbar-header">
-            <a class="navbar-brand" href="#" >Menus</a>
+        <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred; margin-top:  margin20px; ,margin-bottom: 20px; padding: 10px; " >
+           
+                         <marquee> <a class="navbar-brand" href="#" >Burgers</a></marquee>></div></nav>
          <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
-           <div class="navbar-header">
-            <a class="navbar-brand" href="#" >Bevereges</a>
+         </nav>
+     </div>
+ </nav>
+
+         	<?php
+               include ("menu.php");
+
+         	?>
+
+            <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred; margin-top:  margin20px; ,margin-bottom: 20px; padding: 10px; " >
+           
+              <marquee> <a class="navbar-brand" href="#" >Desserts</a></marquee></div></nav>
+         <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
+         </nav>
+     </div>
+ </nav>
+ <?php
+               include ("menu2.php");
+
+         	?>
+         	<nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred; margin-top:  margin20px; ,margin-bottom: 20px; padding: 10px; " >
+          
+                          <marquee><a class="navbar-brand" href="#" >Smoothies</a></marquee></div></nav>
+         <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred;" >
+         </nav>
+     </div>
+ </nav>
+  <?php
+               include ("menu3.php");
+               include("footer.php")
+         	?>
+
           </div>    
           </div>
         </nav>
-      </body>
+      </body
       </html>
     
-      
+
+	  	
 
   
   

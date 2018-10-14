@@ -14,7 +14,17 @@
 	<title></title>
 	
 </head>
-<body>
+<style>
+.fixed-bg {
+    background-image: url("images/cafe.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<body class="fixed-bg">
 	<?php
 	include("header.php");
 	?>

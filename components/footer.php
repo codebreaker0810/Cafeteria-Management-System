@@ -13,8 +13,8 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   padding: 0px;  
-   padding-bottom: 0px;
+   padding-top: 20px;  
+   padding-bottom: 20px;
    background-color: #333;
    color: white;
    text-align: center;

@@ -35,10 +35,13 @@
     <div align="center">
 	<div class="panel-body">
 		<form method="post">
-			<input type="Date" name="startdate">
-			<input type="Date" name="enddate">
+			<div class="form-group">
+			<input type="Date" name="startdate"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>&nbsp
+			<input type="Date" name="enddate"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                         &nbsp&nbsp 
 			<input class="btn btn-primary" type="submit" name="submit" value="Search"> 
-			
+			</div>
+
 		</form>
 	</div>
 	</div>

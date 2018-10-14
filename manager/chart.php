@@ -71,8 +71,10 @@ $("#chartContainer").CanvasJSChart(options);
 <center><div id="chartContainer" style="height: 500px; width: 80%;"></div></center>
 <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-
-
+<br>
+<?php
+include('footer.php');
+?>
 </body>
 </html>
 <script>

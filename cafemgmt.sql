@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2018 at 09:49 PM
+-- Generation Time: Oct 14, 2018 at 11:44 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.1.12
 
@@ -41,16 +41,21 @@ CREATE TABLE `bill` (
 
 INSERT INTO `bill` (`bid`, `cid`, `amount`, `btime`) VALUES
 (9, 105, 80, '2018-10-09 22:39:00'),
-(10, 113, 36000, '2018-10-09 22:57:57'),
-(11, 105, 72000, '2018-10-09 23:05:14'),
-(32, 105, 64800, '2018-10-09 23:30:47'),
-(33, 105, 32692, '2018-10-10 00:01:42'),
-(34, 122, 4050, '2018-10-10 00:06:29'),
-(42, 105, 32805, '2018-10-10 00:24:37'),
-(43, 105, 32400, '2018-10-10 00:26:41'),
+(10, 113, 360, '2018-10-09 22:57:57'),
+(11, 105, 720, '2018-10-09 23:05:14'),
+(32, 105, 648, '2018-10-09 23:30:47'),
+(33, 105, 326, '2018-10-10 00:01:42'),
+(34, 122, 40, '2018-10-10 00:06:29'),
+(42, 105, 32, '2018-10-10 00:24:37'),
+(43, 105, 324, '2018-10-10 00:26:41'),
 (44, 105, 80, '2018-10-10 00:28:04'),
 (61, 122, 160, '2018-10-10 00:49:56'),
-(62, 128, 8639, '2018-10-10 00:57:14');
+(62, 128, 863, '2018-10-10 00:57:14'),
+(63, 105, 432, '2018-10-15 02:25:14'),
+(64, 105, 1000, '2018-10-12 23:05:14'),
+(65, 105, 400, '2018-10-11 23:05:14'),
+(66, 105, 500, '2018-10-13 00:01:42'),
+(67, 105, 1800, '2018-10-14 23:30:47');
 
 --
 -- Triggers `bill`
@@ -143,7 +148,8 @@ INSERT INTO `contains` (`id`, `oid`, `iid`, `quantity`) VALUES
 (60, 94, 10, 7),
 (61, 94, 12, 5),
 (62, 94, 11, 2),
-(63, 94, 9, 200);
+(63, 94, 9, 200),
+(64, 95, 11, 6);
 
 -- --------------------------------------------------------
 
@@ -277,7 +283,8 @@ INSERT INTO `ord` (`oid`, `no_of_item`, `eid`, `status`, `cid`, `otime`) VALUES
 (91, 1, 17, 'paid', 105, '2018-10-10 00:25:42'),
 (92, 1, 17, 'paid', 105, '2018-10-10 00:27:52'),
 (93, 1, 17, 'paid', 122, '2018-10-10 00:49:49'),
-(94, 4, 17, 'paid', 128, '2018-10-10 00:56:45');
+(94, 4, 17, 'paid', 128, '2018-10-10 00:56:45'),
+(95, 1, 17, 'paid', 105, '2018-10-15 02:25:03');
 
 --
 -- Indexes for dumped tables
@@ -355,7 +362,7 @@ ALTER TABLE `ord`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `cafe`
@@ -367,13 +374,13 @@ ALTER TABLE `cafe`
 -- AUTO_INCREMENT for table `contains`
 --
 ALTER TABLE `contains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -397,7 +404,7 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `ord`
 --
 ALTER TABLE `ord`
-  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- Constraints for dumped tables

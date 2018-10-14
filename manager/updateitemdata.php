@@ -40,7 +40,7 @@ include("dbcon.php");
                     <form role="form" method="post" action="updateitemdata2.php" enctype="multipart/form-data">  
                         <fieldset>  
                             <div class="form-group">  
-                               Enter Item desc/name: <input class="form-control" name="name" type="text" value=<?php echo $data['idesc']; ?> pattern="[A-Za-z ]{1-32}" title="Only Letters and spaces allowed" readonly="readonly" required autofocus>
+                               Enter Item desc/name: <input class="form-control" name="name" type="text" value=<?php echo $data['idesc']; ?> pattern="[A-Za-z_]+" title="Only Letters and underscore allowed" readonly="readonly" required autofocus>
                             </div>  
                             <div class="form-group">  
                                Enter Item price: <input class="form-control" name="price" type="text" value=<?php echo $data['price']; ?> pattern="\d+(\.\d+)?" required>  

@@ -118,7 +118,7 @@
       <div class="col-sm-4 py-2">
             <div class="card border-primary">
                 <div class="card-body">
-                    <h3 class="card-title">View bills</h3>
+                    <h3 class="card-title">View bill Report</h3>
                     <p class="card-text">View all bill details.</p>
                     <a href="viewbill.php" class="btn btn-outline-secondary" >View</a>
                 </div>

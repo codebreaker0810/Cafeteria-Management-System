@@ -9,13 +9,12 @@
 <style>
 .footer1 {
    
-   position: absolute;
+   position: relative;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem
-  /*width:100%;
-   background-color: #333;*/
+  width:100%;
+   background-color: #333;
    color: white;
    text-align: center;
 }

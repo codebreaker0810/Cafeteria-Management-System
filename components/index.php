@@ -33,7 +33,8 @@
 	  	include("coffe.php");
 	  	include("sandwitch.php");
 	  	include("pastry.php");*/
-	  	
+	  	?><br><br>
+	  	<?php
 	  	include("footer.php");
 	  ?>
       

@@ -23,11 +23,12 @@
       <a class="nav-link" href="../../employee/home.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../bill/">Genrate Bill</a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link" href="../">Add Order</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../bill/">Generate Bill</a>
+    </li>
+    
     <!-- Dropdown 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

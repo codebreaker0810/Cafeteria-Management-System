@@ -29,7 +29,7 @@
                     <form role="form" method="post" action="insertitem.php" enctype="multipart/form-data">  
                         <fieldset>  
                             <div class="form-group">  
-                               Enter Item desc/name: <input class="form-control" placeholder="name" name="name" type="text" pattern="[A-Za-z]+" title="Only Letters allowed" required autofocus> 
+                               Enter Item desc/name: <input class="form-control" placeholder="name" name="name" type="text" pattern="[A-Za-z_]+" title="Only Letters and underscore allowed" required autofocus> 
                             </div>  
                             <div class="form-group">  
                                Enter Item price: <input class="form-control" placeholder="price" name="price" type="text" pattern="\d+(\.\d+)?" title="Enter price only"  required>  

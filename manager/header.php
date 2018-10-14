@@ -28,6 +28,9 @@
     <li class="nav-item">
       <a class="nav-link" href="contact.php">Contact</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="viewbill.php">Report</a>
+    </li>
     <!-- Dropdown 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

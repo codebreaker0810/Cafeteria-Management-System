@@ -30,21 +30,21 @@
       <img src="b1.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
         <h3>10% OFF</h3>
-        <p>*ON ORDERS ABOVE 1000!</p>
+        <p>*ON ORDERS ABOVE 200!</p>
       </div>   
     </div>
     <div class="carousel-item">
       <img src="b2.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
        <h3>10% OFF</h3>
-        <p>*ON ORDERS ABOVE 1000!</p>
+        <p>*ON ORDERS ABOVE 200!</p>
       </div>   
     </div>
     <div class="carousel-item">
       <img src="b3.jpg" style="height: 550px; width: 100%;">
       <div class="carousel-caption">
        <h3>10% OFF</h3>
-        <p>*ON ORDERS ABOVE 1000!</p>
+        <p>*ON ORDERS ABOVE 200!</p>
       </div>   
     </div>
   </div>

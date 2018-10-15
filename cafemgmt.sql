@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2018 at 11:44 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: Oct 15, 2018 at 05:17 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -219,10 +219,19 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`iid`, `idesc`, `price`, `img`) VALUES
-(9, 'Big_Crunch_Chicken_Cheese_Burger', 50, 'i3.jpg'),
-(10, 'Big_Crunch_Veg_Cheese_Burger', 40, 'i4.jpg'),
+(9, 'Big_Chicken_Cheese_Burger', 50, 'i3.jpg'),
+(10, 'Big_Veg_Cheese_Burger', 40, 'i4.jpg'),
 (11, 'Crispy_Veg_Wrap', 80, 'i6.jpg'),
-(12, 'Fruit_Trifle_Cup', 45, 'i12.jpg');
+(12, 'Fruit_Trifle_Cup', 45, 'i12.jpg'),
+(13, 'Afghani_Chicken_Biryani', 275, 'i2.jpg'),
+(14, 'Black_Forest_Cake', 150, 'i16.jpg'),
+(15, 'Chilli_Cheese_Toastizza', 85, 'i5.jpg'),
+(16, 'Chocolate_ice_cream', 40, 'i7.jpg'),
+(17, 'Cocoa_Fantasy_Pastry', 45, 'i9.jpg'),
+(18, 'Peppy_Chicken_Roll', 85, 'i11.jpg'),
+(19, 'Sizzle_Dazzle_Brownie', 60, 'i19.jpg'),
+(20, 'Hazelnut_Karat_Cake', 150, 'i15.jpg'),
+(21, 'Roasted_Cardamom_Latte', 60, 'i28.jpg');
 
 -- --------------------------------------------------------
 
@@ -392,7 +401,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `manager`

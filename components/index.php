@@ -28,8 +28,26 @@
 
 	  	include("header.php");
 	  	include("carousal.php");
+<<<<<<< HEAD
 
 	  	
+=======
+	  	include("menu.php");
+	  	/*
+	  	include("bevreges.php");
+	  	include("coffe.php");
+	  	include("sandwitch.php");
+	  	include("pastry.php");*/
+	  	?><br><br>
+	  	<?php
+	  	include("footer.php");
+	  ?>
+      
+  
+             
+  
+</div>
+>>>>>>> 6cf2453aa10f42ab5bd6412880d6d5e68cb69068
 
 	  	?>
         <nav class="navbar navbar-dark bg-company-red" style=" background-color: darkred; margin-top:  margin20px; ,margin-bottom: 20px; padding: 10px; " >

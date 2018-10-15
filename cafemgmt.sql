@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2018 at 09:49 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: Oct 15, 2018 at 05:17 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,16 +41,21 @@ CREATE TABLE `bill` (
 
 INSERT INTO `bill` (`bid`, `cid`, `amount`, `btime`) VALUES
 (9, 105, 80, '2018-10-09 22:39:00'),
-(10, 113, 36000, '2018-10-09 22:57:57'),
-(11, 105, 72000, '2018-10-09 23:05:14'),
-(32, 105, 64800, '2018-10-09 23:30:47'),
-(33, 105, 32692, '2018-10-10 00:01:42'),
-(34, 122, 4050, '2018-10-10 00:06:29'),
-(42, 105, 32805, '2018-10-10 00:24:37'),
-(43, 105, 32400, '2018-10-10 00:26:41'),
+(10, 113, 360, '2018-10-09 22:57:57'),
+(11, 105, 720, '2018-10-09 23:05:14'),
+(32, 105, 648, '2018-10-09 23:30:47'),
+(33, 105, 326, '2018-10-10 00:01:42'),
+(34, 122, 40, '2018-10-10 00:06:29'),
+(42, 105, 32, '2018-10-10 00:24:37'),
+(43, 105, 324, '2018-10-10 00:26:41'),
 (44, 105, 80, '2018-10-10 00:28:04'),
 (61, 122, 160, '2018-10-10 00:49:56'),
-(62, 128, 8639, '2018-10-10 00:57:14');
+(62, 128, 863, '2018-10-10 00:57:14'),
+(63, 105, 432, '2018-10-15 02:25:14'),
+(64, 105, 1000, '2018-10-12 23:05:14'),
+(65, 105, 400, '2018-10-11 23:05:14'),
+(66, 105, 500, '2018-10-13 00:01:42'),
+(67, 105, 1800, '2018-10-14 23:30:47');
 
 --
 -- Triggers `bill`
@@ -143,7 +148,8 @@ INSERT INTO `contains` (`id`, `oid`, `iid`, `quantity`) VALUES
 (60, 94, 10, 7),
 (61, 94, 12, 5),
 (62, 94, 11, 2),
-(63, 94, 9, 200);
+(63, 94, 9, 200),
+(64, 95, 11, 6);
 
 -- --------------------------------------------------------
 
@@ -213,10 +219,19 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`iid`, `idesc`, `price`, `img`) VALUES
-(9, 'Big_Crunch_Chicken_Cheese_Burger', 50, 'i3.jpg'),
-(10, 'Big_Crunch_Veg_Cheese_Burger', 40, 'i4.jpg'),
+(9, 'Big_Chicken_Cheese_Burger', 50, 'i3.jpg'),
+(10, 'Big_Veg_Cheese_Burger', 40, 'i4.jpg'),
 (11, 'Crispy_Veg_Wrap', 80, 'i6.jpg'),
-(12, 'Fruit_Trifle_Cup', 45, 'i12.jpg');
+(12, 'Fruit_Trifle_Cup', 45, 'i12.jpg'),
+(13, 'Afghani_Chicken_Biryani', 275, 'i2.jpg'),
+(14, 'Black_Forest_Cake', 150, 'i16.jpg'),
+(15, 'Chilli_Cheese_Toastizza', 85, 'i5.jpg'),
+(16, 'Chocolate_ice_cream', 40, 'i7.jpg'),
+(17, 'Cocoa_Fantasy_Pastry', 45, 'i9.jpg'),
+(18, 'Peppy_Chicken_Roll', 85, 'i11.jpg'),
+(19, 'Sizzle_Dazzle_Brownie', 60, 'i19.jpg'),
+(20, 'Hazelnut_Karat_Cake', 150, 'i15.jpg'),
+(21, 'Roasted_Cardamom_Latte', 60, 'i28.jpg');
 
 -- --------------------------------------------------------
 
@@ -277,7 +292,8 @@ INSERT INTO `ord` (`oid`, `no_of_item`, `eid`, `status`, `cid`, `otime`) VALUES
 (91, 1, 17, 'paid', 105, '2018-10-10 00:25:42'),
 (92, 1, 17, 'paid', 105, '2018-10-10 00:27:52'),
 (93, 1, 17, 'paid', 122, '2018-10-10 00:49:49'),
-(94, 4, 17, 'paid', 128, '2018-10-10 00:56:45');
+(94, 4, 17, 'paid', 128, '2018-10-10 00:56:45'),
+(95, 1, 17, 'paid', 105, '2018-10-15 02:25:03');
 
 --
 -- Indexes for dumped tables
@@ -355,7 +371,7 @@ ALTER TABLE `ord`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `cafe`
@@ -367,13 +383,13 @@ ALTER TABLE `cafe`
 -- AUTO_INCREMENT for table `contains`
 --
 ALTER TABLE `contains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -385,7 +401,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `manager`
@@ -397,7 +413,7 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `ord`
 --
 ALTER TABLE `ord`
-  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- Constraints for dumped tables

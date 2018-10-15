@@ -20,11 +20,12 @@
       <a class="nav-link" href="../employee/home.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../orders/bill/">Genrate Bill</a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link" href="../orders">Add Order</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../orders/bill/">Generate Bill</a>
+    </li>
+    
     <!-- Dropdown 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

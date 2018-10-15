@@ -65,7 +65,7 @@ $query=mysqli_query($con, "SELECT name,address FROM `cafe` WHERE cfid =( SELECT 
       
       
       ?>
-      <?php  if ($total>1000) { echo "<tr><td></td>"; ?>
+      <?php  if ($total>200) { echo "<tr><td></td>"; ?>
             
             <td style="border-right: none;"><?php  ?></td>
             <td ><?php echo "Voila You Got Discount 10% OFF"?></td>

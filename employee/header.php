@@ -26,7 +26,7 @@
       <a class="nav-link" href="../orders">Add Order</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../orders/bill/">Genrate Bill</a>
+      <a class="nav-link" href="../orders/bill/">Generate Bill</a>
     </li>
     <!-- Dropdown 
     <li class="nav-item dropdown">

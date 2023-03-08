@@ -34,7 +34,7 @@
         <a class="fa fa-google-plus social-icon" href="#" target="_blank"></a>
     </div>
 
-  <p>All rights reserved &copy MIT-COE 2018</p>
+  <p>All rights reserved @ N-WADIA 2022</p>
 
 
 </div>

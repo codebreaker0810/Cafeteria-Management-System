@@ -42,7 +42,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; MITCOE_2018-2019</p>
+      <p class="mt-5 mb-3 text-muted">&copy; All rights reserved © N-Wadia 2022</p>
     </form>
   </div>
   </body>

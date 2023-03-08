@@ -35,18 +35,6 @@
 	 <div class="row">
 
       <div class="col-sm-4 py-2">
-            <div class="card border-primary">
-                <div class="card-body">
-                    <h3 class="card-title">Check availability</h3>
-                    <p class="card-text">View Item details.</p>
-                    <a href="itemlist.php" class="btn btn-outline-secondary" >View</a>
-                </div>
-                <div class="card-footer">
-                 <small>Click on button to view</small>
-                </div>
-            </div>
-        </div>
-      <div class="col-sm-4 py-2">
             <div class="card text-white bg-primary">
                 <div class="card-body">
                     <h3 class="card-title">Add order</h3>
@@ -75,6 +63,9 @@
   
 </div>
 </div>
+
+
+
 <?php
     include("footer.php");
 ?>

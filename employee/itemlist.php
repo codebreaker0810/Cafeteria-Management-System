@@ -7,11 +7,8 @@
  ?>
 
 <html>  
-<head lang="en">  
-    <meta charset="UTF-8">  
-    <link type="text/css" rel="stylesheet" href="bootstrap-4.1.3-dist\css\bootstrap.css"> <!--css file link in bootstrap folder--> 
-    <title>View Items</title>  
-</head>  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
 <style>  
     .login-panel {  
         margin-top: 150px;  

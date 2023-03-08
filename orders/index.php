@@ -133,6 +133,7 @@ if(isset($_GET['s']))
  <!-- <button type="submit" class="btn btn-primary">Sign in</button>
 -->
 </div>
+
 </form>
         
  
@@ -235,6 +236,49 @@ var arr=[];
 </style>
 </script>  
 <br>
+  <div class="table-scrol">  
+        <h1 align="center">All the Items</h1><br>
+        <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
+            <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
+            <thead>  
+  
+            <tr>  
+                <th>Item Id</th>  
+                 <th>Image</th> 
+                <th>Item Name</th>  
+                <th>Item Price</th>
+                 
+            </tr>  
+            </thead>  
+            <?php  
+           // include("dbcon.php");  
+            $view_query="select * from item";//select query for viewing users.  
+            $run=mysqli_query($con,$view_query);//here run the sql query.  
+      
+            while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+            {  
+                $id=$row[0];  
+                $name=$row[1];
+                $price=$row[2];  
+                $img=$row[3];      
+            ?>  
+      
+            <tr>  
+            <!--here showing results in the table -->  
+            <td><?php echo $id;  ?></td> 
+            <td><img src="../manager/images/<?php echo $img; ?>"  style="max-width:100px;max-height:100px;"></td>  
+            <td><?php echo $name;  ?></td>   
+            <td><?php echo $price;  ?></td>
+            
+            </tr>  
+      
+            <?php } ?>  
+      
+        </table>  
+        </div>
+    </div>
+</div>  
+</div>
 <?php
   include("../manager/footer.php");
   ?>
